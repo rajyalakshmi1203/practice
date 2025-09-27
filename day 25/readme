@@ -1,0 +1,3 @@
+kubectl create sa bulid-sa
+kubectl create role read --verb=get,list,watch --resource=pod
+kubectl create rolebinding rb --role=read --user=build-sa # it willprovide authorization to buld-sa service account
