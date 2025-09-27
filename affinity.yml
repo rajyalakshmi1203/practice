@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2025-09-02T10:40:28Z"
+  labels:
+    run: nginx
+  name: nginx
+  namespace: default
+  resourceVersion: "901"
+  uid: badd23f6-9dc8-4103-a293-8f33433b385c
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: disktype
+            operator: In
+            values:
+            - ssd           
+status: {}
