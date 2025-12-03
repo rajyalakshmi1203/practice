@@ -1,0 +1,201 @@
+List in python
+**************
+EX: num=[2,5,6,7,99,83]
+    names=['raji','sun','moon','earth']
+    mix=['rajya','earth',6,99]
+By index number we get particular character output
+num[0] - output is 2
+num[4] - output is 99
+num[-1] - output is 83
+mix[3] - output is 99
+mix[1] - output is earth
+
+>>> join=[num,names]
+>>> join    
+the output is [[2, 5, 6, 7, 99, 83], ['raji', 'sun', 'moon', 'earth']]
+>>> join[0]
+[2, 5, 6, 7, 99, 83]
+>>> join[1]
+['raji', 'sun', 'moon', 'earth']
+>>> len(join)
+2 , It will consider each list as one character
+To print particular character then we have to mention both index example
+join[0][3]  -- gives output 7
+join[1][2]  -- gives output moon
+
+>>> num  
+[2, 5, 6, 7, 99, 83]
+>>> num.append(36) -- It will add 36 to the list at the end
+>>> num
+[2, 5, 6, 7, 99, 83, 36]
+>>> num.count(6) -- It will give how many times the number is in the list
+1
+>>> num.count(20)
+0
+>>> num.insert(2,30)  --- It will insert the number at mentioned index
+>>> num
+[2, 5, 30, 6, 7, 99, 83, 36]
+>>> num.remove(7)  --- It will remove the number
+>>> num
+[2, 5, 30, 6, 99, 83, 36]
+
+To remove by index then we can use pop
+>>> num.pop(3)
+6
+>>> num
+[2, 5, 30, 99, 83, 36]
+>>> num.pop() --- If we not mention any index then it will remove the last in first out 
+36
+>>> num
+[2, 5, 30, 99, 83]
+To delete numbers
+>>> del num[2:4]
+>>> num
+[2, 5, 83]
+To add multiple values at a time we use extend
+>>> num.extend([49,87,43,20,10])
+>>> num
+[2, 5, 83, 49, 87, 43, 20, 10]
+To replace values 
+num[2:4]=[38,50]
+>>> num
+[2, 5, 38, 50, 87, 43, 20, 10]
+
+>>> num.reverse()
+>>> num
+[10, 20, 43, 87, 50, 38, 5, 2]
+
+>>> num.sort()
+>>> num
+[2, 5, 10, 20, 38, 43, 50, 87]
+
+>>> min(num)
+2
+>>> max(num)
+87
+>>> sum(num)
+255
+
+>>> names
+['raji', 'sun', 'moon', 'earth']
+>>> min(names)
+'earth'
+>>> max(names)
+'sun'
+
+example
+*******
+>>> a=[33,76,24,56]
+>>> b=['navin','kiran','harsh']
+>>> print((a[:2]+b[1:])[-3])
+76
+
+Tuple
+*****
+1.Mutability - In List we can modify whereas in tuple we cannot modify
+2.Performance - Because tuples are fixed (immutable), Python processes them faster.
+3. Memory Usage - Tuples use less memory → better when storing huge fixed data.
+4. syntax - In List we use square brackets [], In tuple we use parentheses ()
+example
+*******
+demo=85,56,73,45,23
+>>> type(demo)
+<class 'tuple'>
+>>> demo[3]
+45
+>>> demo[3]=56         # tuple values are immutable i.e. we cannot change
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+    demo[3]=56
+    ~~~~^^^
+TypeError: 'tuple' object does not support item assignment
+we can store values in variables
+num1,num2,num3,num4,num5=demo
+>>> num1
+85
+If tuple values include list , the values in the list can be changed
+ex:  tupA=(23,56,'king',[1,2,3,4,5])
+tupA[0] , gives output 23
+tupA[2] , gives the output 'king'
+similarly tupA[3] , gives the output [1,2,3,4,5]
+Now we can change the values in list in tuple
+tupA[3][0]=9
+>>> tupA
+(23, 56, 'king', [9, 2, 3, 4, 5])
+To check values present or not we can check
+>>> 56 in tupA
+True   , if it is not present it returns false
+---------------------------------------------------------------------------------
+
+set
+***
+Set is a collection of unordered unique elements and which is mentiioned in flower braces {}
+ex:1
+>>> setA={23,89,56,23,67}
+>>> setA     
+{56, 89, 67, 23}
+
+ set1={}
+  type(set1)
+<class 'dict'>  ,here it is giving the type is dict so inorder to mention empty set 
+ set2=set() 
+ type(set2)
+<class 'set'>
+
+ex:2
+ set3=set('abfghlk')
+>>> set4=set('ahklmfn')
+>>> set3-set4
+{'b', 'g'}
+>>> set4-set3
+{'n', 'm'}
+>>> set3|set4
+{'k', 'l', 'm', 'b', 'h', 'f', 'a', 'n', 'g'}
+>>> set3&set4
+{'k', 'l', 'h', 'f', 'a'}
+>>> set3^set4
+{'m', 'b', 'n', 'g'}
+==========================================================================
+
+Dictionary
+***********
+A dictionary in Python is a collection of key–value pairs.
+It is one of the most powerful and commonly used data structures.
+key : value
+example:1
+data={'kiran': 26, 'ravi': 34, 'krishna': 40, 'raj': 25}
+here kiran,ravi,krishna,raj are keys and 26,34,40,25 are values
+ data['kiran']   , the output is 26
+ data.get('raj') , the output is 25
+ data.get('raji') , we don't get any output
+ print(data.get('raji'))  , the output is None
+Instead of getting the output none or anything we can display what to get the output 
+data.get('raji','not found') , the output is not found
+
+example:2
+data1={'kiran':26,'ravi':34,'krishna':40,'raj':25,'kiran':59,'gopi':34}
+>>> data1
+{'kiran': 59, 'ravi': 34, 'krishna': 40, 'raj': 25, 'gopi': 34}
+By this we come to know that keys are to be unique and values can be any or same
+keys are set,values are list
+
+example:3
+creating a dictionary from set and values
+keys={'raji','niru','bhavi'}
+values=[12,3,10]
+to create dictionary dict1=dict(zip(keys,values)) , in this dict and zip are inbuild functions
+then if we type dict1 we get output as {'raji': 12, 'niru': 3, 'bhavi': 10}
+
+example:4
+data={'kiran': 26, 'ravi': 34, 'krishna': 40, 'raj': 25}
+ data.pop('ravi') , it returns output of ravi as 34 and it is deleted and if we type data we get output as
+ {'kiran': 26, 'krishna': 40, 'raj': 25}
+ to delete we can use this command also del data['krishna']
+
+ example:5
+  data2={'js':'vscode','python':['vscode','pycharm'],'java':{'core':'vscode','spring':'iij'}}
+  data2.get('js')  , we get output as 'vscode'
+  data2['python'] ,we get output as ['vscode', 'pycharm'] ,to display only one then
+  data2['python'][1]  , we get output as 'pycharm'
+  data2['java']   , we get output as {'core': 'vscode', 'spring': 'iij'}
+   data2['java']['spring']  , we get output as 'iij'
