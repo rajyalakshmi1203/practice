@@ -1,0 +1,64 @@
+Python is a high-level, interpreted, object-oriented programming language used for building applications, automation, data processing, web development, AI/ML, and DevOps tasks.
+Easy to Learn & Read
+Very Good for Automation
+write once and run anywhere.
+--------------------------------------------------------
+Number operations
+*****************
+python follows order BODMAS(Brackets,orders,division,multiply,addition,subtraction)
+9+3,9 * 3
+8+4*3   here python follows BODMAS first it performs multiplication then addition
+so the answer is 20 , If we want addition to perform first we should use Brackets
+(8+4)*3  now the answer is 36
+To perform squares,cubes or any n power we could use like example a ** n
+4 ** 3  It will give answer 4 cube is 64
+4 ** 60  we can find the power of any Number
+8 / 2   It gives 4.0 output
+9 / 2   It gives output 4.5 which is called Float numbers
+9 // 2  It gives quotient output 4
+9 % 2    It gives remainder output 1 , Here % is called mod or modulus operator
+If we want something to do with previous result we use _
+example  6*3, we get 18 output ,If we want to add 2 to the previous output then we perform 2 + _ , it will give the output 20
+----------------------------------------------------------------------------------
+
+Strings in python
+*****************
+Like numbers we can't print strings directly we have to mention in quotes or we can
+use print command 
+example : 'king' , "king" - it will give output 'king'
+           print('king')  - it will give output king
+  print('raji's day') - it will read middle apostrophe also as closing so it will display syntax error
+  print("raji's day") - it will give output raji's day
+  print('raji\'s day') - it will give output raji's day
+  print('c:\\user\\prac\\\"day1".txt') - it will give output c:\user\prac\"day1".txt   
+
+If name='rajya'  , it will store rajya in name and if we want to add lakshmi then
+name 'lakshmi'   , it will give synatax error
+name+'lakshmi' , then it will give output rajyalakshmi. This is called Concatenating
+
+String with characters------> If text='rajyalakshmi'
+text[4]  , It gives output a
+text[2:5] , It gives output jya
+text[0:5] , It gives output rajya
+text[5:12] , It gives output lakshmi 
+text[-4]  , It gives output s
+len(text)  , It gives length of the string , output is 12
+
+text='my name is rajyalakshmi \n I live in Bangalore' 
+print(text), the output is
+my name is rajyalakshmi 
+ I live in Bangalore
+
+By using below syntax also we can print in lines
+>>> text="""
+... I am an Indian
+... I like beaches
+... I like chicken
+... """
+>>> text
+'\nI am an Indian\nI like beaches\nI like chicken\n'
+>>> print(text) , then the output is below
+I am an Indian
+I like beaches
+I like chicken
+-------------------------------------------------------------------------
