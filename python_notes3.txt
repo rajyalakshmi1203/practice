@@ -1,0 +1,115 @@
+variables
+**********
+ a=5
+>>> b=5
+>>> id(a)
+140734763738360
+>>> id(b)
+140734763738360
+
+In the above example both a and b are referring same number so the address is same.
+If b referes to other number 6 then the address will be changed
+It will be same in the case of strings , that referring to string the address will be same
+
+ demo="my fav colour is pink"
+>>> id(demo)
+2604536503088
+>>> raji="my fav colour is pink"
+>>> id(raji)
+2604536503472
+If the string is large means its a sentence then referring to same object ,then address will change 
+so for small string address will be same but for large sentence it will differ
+In case of numbers also it will differ for large numbers
+
+In case non using objects the python will delete it by garbage collection
+
+==========================================================================================================
+Data types in python
+********************
+>>> x=10
+>>> type(x)
+<class 'int'>   , here the data type of x is integer
+>>> y=3.67
+>>> type(y)
+<class 'float'>   , here the data type of y is float
+>>> v=6+7j
+>>> type(v)
+<class 'complex'>  , here the data type is complex numbers
+we can build a complex number as there is inbuild complex function
+>>> a=9
+>>> b=3
+>>> c=complex(a,b)
+>>> c
+(9+3j)
+
+we can also convert the data types like from int to float,viceverse we can convert any
+ex: 
+y = 3.67  , y is float number
+>>> h=int(y)  , here now h stores integer i.e 3
+>>> u=float(h) , here now u stores float number i.e. 3.0
+
+>>> name=raji
+>>> type(name)
+<class 'str'>  , here name is a string type
+
+>>> h = 7
+>>> i=9
+>>> g=h>i
+>>> g
+False
+>>> type(g)
+<class 'bool'>   , here the data type is boolean i.e true or false 
+we can also conver boolean into integers
+>>> m=int(g)
+>>> m
+0     , here it is false means 0 in integers , if it is true it returns 1
+
+none value ,
+In Python, None represents no value, nothing, or null.
+It is a special constant used to indicate the absence of a value.
+example:
+>>> result=None
+>>> type(result)
+<class 'NoneType'>
+
+we have list,tuple,set,dictionary
+
+range: The range() function in Python is used to generate a sequence of numbers.
+It is commonly used in loops, especially for loops.
+syntax:  range(start, stop, step)
+example: 
+>>> r=range(10)
+>>> r
+range(0, 10)
+>>> type(r)
+<class 'range'>
+>>> list(r)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+>>> list(range(2,11,2))     , to get even numbers
+[2, 4, 6, 8, 10]
+
+>>> list(range(1,20,2))
+[1, 3, 5, 7, 9, 11, 13, 15, 17, 19]   , to get odd numbers
+=========================================================================================
+
+Operators
+**********
+1.Assignment operator (=)  , ex: a=3,b=5
+2.Arithmetic operator (+,-,/,//,%,*) , ex: a+b,a-b,a/b,a//b,a%b,a*b 
+  i.Arthimetic operator with two operands is called binary operators. ex: a+b,a-b
+  ii.Arthimetic operator with one operand is called unary operators. ex: -a , a=-a
+  iii. Relational operators ex : a<=b,a>=b,a==b,a!=b
+ex: a=a+2, here we are combinging two operators there is a short cut
+    a+=2  both will give same output
+3.Logical operators
+   i. And operator
+   ex : a<10 and b>10 - The output is false
+        a>10 and b<10 - the output is false
+        a>10 and b>10 - The output is false
+        a<10 and b<10 - the output is true
+   ii. Or operator
+   ex : a<10 and b>10 - The output is true
+        a>10 and b<10 - the output is true
+        a>10 and b>10 - The output is false
+        a<10 and b<10 - the output is true
