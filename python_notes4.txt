@@ -1,0 +1,168 @@
+functions
+**********
+A function in Python is a block of reusable code that performs a specific task.
+Functions make our program modular, reusable, and clean.
+example:
+def sub(x,y):
+    a=x
+    b=y
+    print(a-b)
+
+sub(10,4)            # the output we get is 6
+
+example:2
+def sub(x,y):
+    a=x
+    b=y
+    return (a-b)
+
+result=sub(10,8)
+print("result is : ",result)
+
+result=sub(10,5)
+print("result is : ",result)
+
+If we execute we get output as
+result is : 2
+result is : 5
+=========================================================================================
+
+Modules
+--------
+A module is just a Python file (.py) that contains:Functions,Variables,Classes,Code
+Modules help you organize your program and reuse code.
+Types of Modules
+1. Built-in Modules : These come with Python installation.
+   Examples:
+      import math
+      import random
+      import os
+      import datetime
+2.User-defined Modules: These are created by user.
+
+How to Import a Module
+--------------------------
+1. Simple import
+   import math
+   print(math.sqrt(16))
+2. Import with alias (short name)
+   import math as m
+   print(m.pi)
+3. Import specific things
+   from math import sqrt, pi
+   print(sqrt(25))
+   print(pi)
+4. Import everything (not recommended)
+   from math import *
+
+usermodule.py
+-----------
+def add(x,y):
+    a=x
+    b=y
+    return(a+b)
+
+calling usermodule.py in another file
+import usermodule
+result=usermodule.add(3,4)
+print('the addition is: ',result)
+
+Packages
+--------
+In Python, packages help you organize your code into folders (directories) so that it becomes modular, clean, and reusable.
+here we are importing into another file which is outside the folder.
+
+example:
+1.created a calculator folder in this we created demo1.py,test1.py files
+  calculator
+    demo1.py
+    test1.py
+2. In demo1.py we created modules
+   def add():
+    print("Addition")
+   def mul():
+    print("multiplication")
+3. In test1.py we called the modules created in demo1.py
+   from demo1 import *  # here instead of * we can mention module add,mul
+   add()
+   mul()
+
+the above steps are calling the modules in same folder or package
+
+4. create a file  demo.py outside the calculator and in demo.py file we are calling the modules in calculator folder
+   from calculator.demo1 import *  # here instead of * we can mention module like add,mul 
+   add()
+   mul() 
+
+=================================================================================
+
+input() function
+------------------
+a=input('enter a value ')
+b=input('enter b value ')
+result=a+b
+print('the result is',result)   # here the values are not added because input function returns sring
+                                # so we have to convert to integers,floats etc
+
+x=input('enter x value ')
+y=input('enter y value ')
+sum=int(x)+int(y)            # converting string to integers
+print('the sum is ',sum)     # here the values are added 
+
+a=input('enter the data ')
+print(a[0])                 # Here it will return the character which is in index 0
+===========================================================================================================
+
+if in Python
+------------
+age=input('enter the age ')
+if  int(age)>=18:
+    print('Elgible to vote')
+if int(age)<18:
+    print('Not elgible to vote')
+=====================================================
+else 
+-----
+num=int(input('enter a number: '))
+
+if num>0:
+    print('Positive number')
+elif num<0:
+    print('Negative number')
+else:
+    print('zero')
+=============================================================================
+nested if
+----------
+marks=int(input('enter marks obtained: '))
+if marks>=50:
+    print("Pass")
+    if marks>=75:
+        print('Distinction')
+    else:
+        print('Average')
+else:
+    print('Fail')
+print('END OF THE EVALUATION')
+======================================================================================
+elif in Python
+--------------
+score=int(input('enter score obtained: '))
+if score>=90:
+    print("Grade A+")
+elif score>=75:
+  print("Grade A")
+elif score>=60:
+   print('Grade B')
+else:
+   print("Grade C")   
+=============================================================================================
+
+match in Python
+---------------
+num=int(input("enter the number "))
+match num%3:
+    case 0:
+        print("Divisible by 3")
+    case _:
+        print("Not Divisible by 3")
